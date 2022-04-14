@@ -1,0 +1,11 @@
+.active{
+    color: rgb(255, 62, 62);
+}
+.active::after{
+    content: "";
+    display: block;
+    height: 1.5px;
+    background-color: rgb(255, 62, 62);
+    width: 100%;
+    border-radius: 50%;
+}

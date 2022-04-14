@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Eggs Benedict",
+        "price": 6.99,
+        "image":"https://i.ibb.co/FmpWYq9/breakfast1.png"
+    },
+    {
+        "id": 2,
+        "name": "Breakfast Sandwich",
+        "price": 9.99,
+        "image":"https://i.ibb.co/fMtfrxZ/breakfast2.png"
+    },
+    {
+        "id": 3,
+        "name": "Baked Chicken",
+        "price": 10.99,
+        "image":"https://i.ibb.co/zmD7SQq/breakfast3.png"
+    },
+    {
+        "id": 4,
+        "name": "Bagel and Cream Cheese",
+        "price": 6.99,
+        "image":"https://i.ibb.co/QfrDZv8/breakfast4.png"
+    },
+    {
+        "id": 5,
+        "name": "Full Breakfast Fried Egg Toast Brunch",
+        "price":3.99,
+        "image":"https://i.ibb.co/DKwBvN4/breakfast5.png"
+    },
+    {
+        "id": 6,
+        "name": "Toast Croissant Fried Egg",
+        "price": 19.99,
+        "image":"https://i.ibb.co/sCz68nv/breakfast6.png"
+    }
+]
