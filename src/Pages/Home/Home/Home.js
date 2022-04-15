@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
             <Banner />
-            <div className='flex gap-6 justify-center mt-6 mb-4 font-semibold text-gray-700'>
+            <div className='flex gap-6 justify-center my-10 font-semibold text-gray-700'>
                 <NavLink to='/home/breakfast'>Breakfast</NavLink>
                 <NavLink to='/home/lunch'>Lunch</NavLink>
                 <NavLink to='/home/dinner'>Dinner</NavLink>
@@ -15,7 +15,6 @@ const Home = () => {
             <div>
                 <Outlet />
             </div>
-
         </div>
     );
 };

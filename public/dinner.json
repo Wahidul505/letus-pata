@@ -3,36 +3,36 @@
         "id": 1,
         "name": "Baked Chicken",
         "price": 9.99,
-        "image":"https://i.ibb.co/fQBmFkC/dinner1.png"
+        "image": "https://i.ibb.co/fQBmFkC/dinner1.png"
     },
     {
         "id": 2,
         "name": "Lemony Salmon Piccata",
-        "price": 10.99 ,
-        "image":"https://i.ibb.co/jZV3yJ0/dinner2.png"
+        "price": 10.99,
+        "image": "https://i.ibb.co/jZV3yJ0/dinner2.png"
     },
     {
         "id": 3,
         "name": "Garlic Butter Baked Salmon",
-        "price" : 6.99,
-        "image":"https://i.ibb.co/L9CqzdQ/dinner3.png"
+        "price": 6.99,
+        "image": "https://i.ibb.co/L9CqzdQ/dinner3.png"
     },
     {
         "id": 4,
         "name": "French Fires with Cheese",
         "price": 8.99,
-        "image":"https://i.ibb.co/BzHhhLj/dinner4.png"
+        "image": "https://i.ibb.co/BzHhhLj/dinner4.png"
     },
     {
         "id": 5,
         "name": "Pok Tenderloin with Quinoa Pilaf",
-        "price" : 12.99,
-        "image":"https://i.ibb.co/d2PRdMm/dinner5.png"
+        "price": 12.99,
+        "image": "https://i.ibb.co/d2PRdMm/dinner5.png"
     },
     {
         "id": 6,
         "name": "Salmon with Grapefruit and Lentil Salad",
-        "price": 9.99 ,
-        "image":"https://i.ibb.co/4Fw1C9y/dinner6.png"
+        "price": 9.99,
+        "image": "https://i.ibb.co/4Fw1C9y/dinner6.png"
     }
 ]

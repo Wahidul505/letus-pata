@@ -1,11 +1,13 @@
 import React from 'react';
 import {FiShoppingCart} from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import letus from '../../../images/letus-logo.png';
 
 const Header = () => {
+    const navigate = useNavigate();
     return (
         <div className='flex justify-between px-6 py-3 bg-white items-center'>
-            <h1 className='text-3xl'>Letus Pata</h1>      
+            <img onClick={()=>navigate('/')} className='w-32 cursor-pointer' src={letus} alt="" />      
             <nav className='flex gap-6 items-center text-xl'>
                 <Link to='/cart'><FiShoppingCart /></Link>
                 <Link to='/login'>Login</Link>
