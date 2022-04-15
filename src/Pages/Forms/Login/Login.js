@@ -1,13 +1,38 @@
-import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import letus from '../../../images/letus-logo.png';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import Loader from '../../Shared/Loader/Loader';
 const Login = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from.pathname || '';
     const emailRef = useRef('');
     const passwordRef = useRef('');
-    const handleLogin = e =>{
+    const [displayError, setDisplayError] = useState('');
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+    const handleLogin = e => {
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
+        signInWithEmailAndPassword(email, password);
+    }
+    useEffect(() => {
+        if (error) {
+            setDisplayError(error.message);
+        }
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    }, [navigate, user, error, from]);
+    if (loading) {
+        return <Loader />
     }
     return (
         <div className='text-center w-2/3 md:w-1/3 mx-auto mt-12'>
@@ -15,6 +40,9 @@ const Login = () => {
             <form onSubmit={handleLogin} className='flex flex-col gap-4 mb-2'>
                 <input ref={emailRef} className='bg-slate-200 rounded p-1 text-lg' type="email" name="" id="email" placeholder='Email' />
                 <input ref={passwordRef} className='bg-slate-200 rounded p-1 text-lg' type="password" name="" id="password" placeholder='Password' />
+                {
+                    displayError && <p className='text-red-600'>{displayError}</p>
+                }
                 <input className='bg-green-500 p-1 text-xl text-white rounded' type="submit" value="Login" />
             </form>
             <Link className='text-green-500' to='/signup'>New to Letus Pata?</Link>

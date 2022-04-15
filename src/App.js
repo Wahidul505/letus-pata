@@ -10,6 +10,7 @@ import { createContext, useEffect, useState } from 'react';
 import Cart from './Pages/Checkout/Cart/Cart';
 import Login from './Pages/Forms/Login/Login';
 import Signup from './Pages/Forms/Signup/Signup';
+import RequireAuth from './Pages/Shared/RequireAuth/RequireAuth';
 
 export const DishContext = createContext();
 function App() {
@@ -43,7 +44,11 @@ function App() {
             <Route path='dinner' element={<Dinner />}></Route>
           </Route>
           <Route path='/preview/:dishName' element={<DishReview />}></Route>
-          <Route path='/cart' element={<Cart />}></Route>
+          <Route path='/cart' element={
+            <RequireAuth>
+              <Cart />
+            </RequireAuth>
+          }></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/signup' element={<Signup />}></Route>
         </Routes>
