@@ -5,11 +5,7 @@ const Banner = () => {
     return (
         <div className='relative w-full'>
             <img className='w-full' src={bannerBg} alt="" />
-            <div className='absolute left-0 right-0 top-0 flex justify-center items-center h-full flex-col'>
-                <h1 className='text-xl md:text-4xl mb-4 text-amber-500'>Fast, Fresh, Intent Dishes</h1>
-                <div className='bg-white flex justify-between rounded-3xl w-1/2'>
-                    <input className='w-full p-1 md:px-3 md:py-2 rounded-3xl' type="text" name="" placeholder='Search Your Favorite Dishes' /><button className='rounded-3xl bg-red-500 text-white px-3 py-1 md:py-2'>Search</button></div>
-            </div>
+            <h1 className='absolute right-0 left-0 top-12 text-center text-xl md:text-4xl mb-4 text-amber-500'>Fast, Fresh, Intent Dishes</h1>
         </div>
     );
 };
